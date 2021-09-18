@@ -13,11 +13,11 @@ echo $1
 
 if [ $# -ge 0 ] && [ "$1" == "lazy-dl" ]
 then
-    echo "Using Lazy Download Flavour"
+    echo "Using Lazy Download Flavor"
     built_in_sdk=0
 elif [ $# -ge 0 ] && [ "$1" == "built-in" ]
 then
-    echo "Using Built-In SDK Flavour"
+    echo "Using Built-In SDK Flavor"
     built_in_sdk=1
 else
     echo "Please use either built-in or lazy-dl as parameter"
