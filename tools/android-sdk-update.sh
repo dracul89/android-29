@@ -36,8 +36,6 @@ else
   unzip commandlinetools-linux.zip
   mkdir cmdline-tools
   mv tools cmdline-tools/
-  rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
-  wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -O /opt/android-sdk-linux/tools/lib/
   rm commandlinetools-linux.zip
 fi
 
@@ -65,3 +63,7 @@ update_sdk
 
 echo "Accepting Licenses"
 android-accept-licenses.sh "sdkmanager --licenses --verbose"
+
+echo "updating Jython"
+  rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
+  wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -O /opt/android-sdk-linux/tools/lib/ 
