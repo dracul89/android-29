@@ -35,7 +35,4 @@ RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platform-tools"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android-29"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-29;google_apis;x86_64"
 
-RUN rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
-RUN wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.2/jython-standalone-2.7.2.jar -O /opt/android-sdk-linux/tools/lib/
-
 CMD /opt/tools/entrypoint.sh built-in
