@@ -38,4 +38,3 @@ RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;and
 CMD /opt/tools/entrypoint.sh built-in
 
 RUN rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
-RUN rm /usr/share/java/jython-2.7.2~b2.jar
