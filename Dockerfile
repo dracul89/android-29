@@ -17,7 +17,7 @@ ENV PATH "${PATH}:${ANDROID_HOME}/bin"
 
 RUN dpkg --add-architecture i386 && \
     apt-get update -yqq && \
-    apt-get install -y curl expect git libgcrypt20-dev=1.8.5-5ubuntu1.1 libc6:i386 libgcc1:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386 openjdk-8-jdk wget unzip vim jython && \
+    apt-get install -y curl expect git libgcrypt20-dev=1.8.5-5ubuntu1.1 libc6:i386 libgcc1:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386 openjdk-8-jdk wget unzip vim && \
     apt-get clean
 
 RUN groupadd android && useradd -d /opt/android-sdk-linux -g android android
@@ -38,3 +38,4 @@ RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;and
 CMD /opt/tools/entrypoint.sh built-in
 
 RUN rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
+RUN rm /usr/share/java/jython-2.7.2~b2.jar
