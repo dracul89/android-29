@@ -36,3 +36,5 @@ RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-29;google_apis;x86_64"
 
 CMD /opt/tools/entrypoint.sh built-in
+
+RUN rm /opt/android-sdk-linux/tools/lib/jython-standalone-2.5.3.jar
